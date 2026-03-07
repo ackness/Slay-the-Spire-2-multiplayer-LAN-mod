@@ -1,0 +1,13 @@
+.firecrawl/
+.godot/
+.mono/
+.obsidian/
+.vscode/
+.vscode/.ropeproject/
+sts2-RMP-Mods/
+**/.DS_Store
+**/bin/
+**/obj/
+**/build/
+*.user
+*.suo
