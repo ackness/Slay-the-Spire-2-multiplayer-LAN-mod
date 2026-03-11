@@ -10,20 +10,23 @@
 
 当前版本：
 
-- MOD 版本：`0.1.1`
-- GitHub Release tag：`v0.1.1`
+- MOD 版本：`0.1.2`
+- GitHub Release tag：`v0.1.2`
 
 ## 当前功能
 
 - 多人首页新增 `局域网创建`
 - 多人首页新增 `局域网继续`
 - Join 页面新增 `LAN IP` 输入框和 `Join via IP`
+- Join 页面和多人首页新增联机昵称输入，并同步到大厅/对局内玩家显示
+- 大厅和对局内新增 LAN 聊天面板，支持拖动、折叠和位置持久化
 - 复用游戏内置 `ENet` 与 `JoinFlow`
 - 默认端口：`33771`
 - 支持最近一次连接地址持久化
 - 房主地址弹窗支持一键复制 `IP:Port`
 - 提供 macOS / Windows 一键安装脚本
 - 提供无 MOD 存档到 modded 存档的一键迁移 / 单向同步
+- 安装脚本只补齐缺失的 modded 存档文件，不覆盖已有 modded 存档
 
 ## 仓库结构
 
@@ -44,12 +47,12 @@
 
 ## 下载预编译版本
 
-如果你不想自己构建,可以直接下载预编译的发布包:
+如果你不想自己构建，可以直接下载预编译的发布包：
 
-- **Windows 版本**: [`releases/sts2_lan_connect-v0.1.1-windows.zip`](releases/sts2_lan_connect-v0.1.1-windows.zip)
-- **macOS 版本**: 暂未提供预编译版本,请参考下方构建说明自行构建
+- **Windows 版本**: [`v0.1.2 Release`](https://github.com/ackness/Slay-the-Spire-2-multiplayer-LAN-mod/releases/tag/v0.1.2)
+- **macOS 版本**: 暂未提供预编译版本，请参考下方构建说明自行构建
 
-下载后解压,然后参考 [3. 一键安装](#3-一键安装) 进行安装。
+下载后解压，然后参考 [3. 一键安装](#3-一键安装) 进行安装。
 
 ## 快速开始
 
@@ -73,7 +76,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\build-sts2-lan-connect-window
 - `GODOT_BIN`
 - `DOTNET_BIN`
 
-Windows 建议优先使用标准版 Godot 可执行文件来打 `pck`。如果使用 mono/.NET 版 Godot，需要确保同目录下存在完整的 `GodotSharp/Api/Debug`。
+Windows 建议优先使用标准版 Godot 4.5.1 可执行文件来打 `pck`。
 
 ### 2. 打包
 
@@ -112,20 +115,21 @@ powershell -ExecutionPolicy Bypass -File .\scripts\install-sts2-lan-connect-wind
 - `0Harmony.dll`
 - `Steamworks.NET.dll`
 
-因此无法在 GitHub Actions 上自动构建,需要在本地有游戏安装的环境中手动构建。
+因此无法在 GitHub Actions 上自动构建，需要在本地有游戏安装的环境中手动构建。
 
 当前版本：
 
-- MOD 版本：`0.1.1`
-- Release tag：`v0.1.1`
+- MOD 版本：`0.1.2`
+- Release tag：`v0.1.2`
 
 ## 典型联机流程
 
 1. 房主启动游戏并加载同版本 MOD
 2. 在多人首页点击 `局域网创建`
 3. 把本机局域网地址或虚拟局域网地址发给队友
-4. 队友在 `加入` 页面输入 `IP` 或 `IP:33771`
+4. 队友在 `加入` 页面输入 `IP` 或 `IP:33771`，并可按需填写联机昵称
 5. 点击 `Join via IP`
+6. 进入大厅或对局后，可通过右下角 LAN 聊天面板交流
 
 同机测试时，成员端可直接填：
 
@@ -141,8 +145,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\install-sts2-lan-connect-wind
 
 当前打包文件：
 
-- `sts2-lan-connect/release/sts2_lan_connect-v0.1.1-macos.zip`
-- `sts2-lan-connect/release/sts2_lan_connect-v0.1.1-windows.zip`
+- `sts2-lan-connect/release/sts2_lan_connect-v0.1.2-windows.zip`
 
 发布包内包含：
 
