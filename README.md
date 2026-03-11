@@ -34,8 +34,10 @@
   MOD 工程目录
 - `scripts/`
   构建、打包、安装脚本
+- `releases/`
+  提交到仓库的预编译发布包
 - `sts2-lan-connect/release/sts2_lan_connect/`
-  当前可分发的发布目录
+  本地打包生成的发布目录
 - `LAN_MOD_RESEARCH.md`
   反编译与链路确认记录
 - `LAN_MOD_IMPLEMENTATION_PLAN.md`
@@ -49,7 +51,7 @@
 
 如果你不想自己构建，可以直接下载预编译的发布包：
 
-- **Windows 版本**: [`v0.1.2 Release`](https://github.com/ackness/Slay-the-Spire-2-multiplayer-LAN-mod/releases/tag/v0.1.2)
+- **Windows 版本**: [`releases/sts2_lan_connect-v0.1.2-windows.zip`](releases/sts2_lan_connect-v0.1.2-windows.zip)
 - **macOS 版本**: 暂未提供预编译版本，请参考下方构建说明自行构建
 
 下载后解压，然后参考 [3. 一键安装](#3-一键安装) 进行安装。
@@ -145,6 +147,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\install-sts2-lan-connect-wind
 
 当前打包文件：
 
+- `releases/sts2_lan_connect-v0.1.2-windows.zip`
 - `sts2-lan-connect/release/sts2_lan_connect-v0.1.2-windows.zip`
 
 发布包内包含：
